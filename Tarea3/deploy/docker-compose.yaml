@@ -1,0 +1,31 @@
+version: "3.1"
+
+services:
+
+  db:
+    container_name: bookmedik-mysql
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_DATABASE: bookmedik
+      MYSQL_USER: bookmedik
+      MYSQL_PASSWORD: bookmedik
+      MYSQL_ROOT_PASSWORD: javier
+    volumes:
+      - /home/javier/Docker/Volumes/Tarea3:/var/lib/mysql
+
+  bookmedik:
+    container_name: bookmedik
+    image: javierpzh/nginx:v1
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - /home/javier/Docker/Implantacion-de-aplicaciones-web-PHP-en-Docker/Tarea3/build/bookmedik/:/bookmedik
+
+  php:
+    container_name: bookmedik-php
+    image: javierpzh/php-fpm:v1
+    restart: always
+    volumes:
+      - /home/javier/Docker/Implantacion-de-aplicaciones-web-PHP-en-Docker/Tarea3/build/bookmedik/:/bookmedik

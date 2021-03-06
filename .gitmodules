@@ -4,3 +4,6 @@
 [submodule "Tarea2/build/bookmedik"]
         path = Tarea2/build/bookmedik
         url = https://github.com/evilnapsis/bookmedik
+[submodule "Tarea2/build/bookmedik"]
+        path = Tarea3/build-nginx/bookmedik
+        url = https://github.com/evilnapsis/bookmedik
