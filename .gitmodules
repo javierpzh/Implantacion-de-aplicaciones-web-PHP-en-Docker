@@ -1,0 +1,3 @@
+[submodule "Tarea1/build/bookmedik"]
+	path = Tarea1/build/bookmedik
+	url = https://github.com/evilnapsis/bookmedik
