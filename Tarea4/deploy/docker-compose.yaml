@@ -14,7 +14,7 @@ services:
     volumes:
       - /home/javier/Docker/Volumes/tarea4/db:/var/lib/mysql
 
-  mediawiki:
+  prestashop:
     container_name: prestashop
     image: javierpzh/prestashop:v1
     restart: always
